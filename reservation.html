@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <img src="images/logo.png" alt="Food Finder" width="20%" height="20%">
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="recommend.html">Recommend</a>
+        <a href="register.html">Register</a>
+        <a class="active" href="reservation.html">Reservation</a>
+    </nav>
+</header>
+<div class="crt">
+<section>
+
+    <h2>Reservation Form</h2>
+
+    <form id="reservationForm"
+    method="POST"
+    action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+
+        <label>Full Name</label>
+        <input type="text" id="fullName">
+
+        <label>Email</label>
+        <input type="email" id="reserveEmail">
+
+        <label>Phone</label>
+        <input type="text" id="reservePhone">
+
+        <label>Restaurant</label>
+        <select id="restaurant" onchange="updateDeposit()">
+            <option>Spuckies</option>
+            <option>Bella Italia</option>
+            <option>Sakura Sushi</option>
+            <option>Spice Garden</option>
+            <option>Ocean Grill</option>
+            <option>Green Bowl</option>
+            <option>Steak House</option>
+        </select>
+
+        <label>Date</label>
+        <input type="datetime-local" id="date">
+
+        <label>Number of People</label>
+        <input type="number" id="people">
+
+        <label>Special Requests</label>
+        <textarea></textarea>
+
+        <label>Deposit Amount</label>
+        <input type="text" id="deposit" readonly>
+
+        <label>Payment Method</label>
+        <select id="payment" onchange="togglePayment()">
+            <option>Voucher</option>
+            <option>Online Payment</option>
+        </select>
+
+        <div id="voucherSection">
+            <label>Voucher Code</label>
+            <input type="text" id="voucher">
+        </div>
+
+        <div id="cardSection">
+            <label>Card Number</label>
+            <input type="text" id="card">
+        </div>
+
+        <label>Billing Email</label>
+        <input type="email" id="billing">
+
+        <label>
+            <input type="checkbox" onclick="sameEmail()">
+            Same as email address
+        </label>
+
+        <button type="submit">Reserve</button>
+
+    </form>
+
+    <div id="reservationErrors"></div>
+
+</section>
+
+<footer>
+    <p>Food Finder 2026</p>
+</footer>
+<script src="js/script.js"></script>
+
+</body>
+</html>

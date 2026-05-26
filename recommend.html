@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <img src="images/logo.png" alt="Food Finder" width="20%" height="20%">
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a class="active" href="recommend.html">Recommend</a>
+        <a href="register.html">Register</a>
+        <a href="reservation.html">Reservation</a>
+    </nav>
+</header>
+<div class="crt">
+<section>
+
+    <h2>Restaurant Recommendation</h2>
+
+    <form id="recommendForm">
+
+        <label for="diet">Dietary Preference:</label>
+        <select id="diet">
+            <option value="None">None</option>
+            <option value="Vegan">Vegan</option>
+            <option value="Halal">Halal</option>
+        </select>
+
+        <label for="budget">Budget:</label>
+        <select id="budget">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+
+        <label for="purpose">Dining Purpose:</label>
+        <select id="purpose">
+            <option value="Family">Family</option>
+            <option value="Date">Date</option>
+            <option value="Business">Business</option>
+        </select>
+
+        <button type="button" onclick="recommendRestaurant()">Get Recommendation</button>
+
+    </form>
+
+    <div id="recommendation"></div>
+
+</section>
+
+<footer>
+    <p>Food Finder 2026</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
